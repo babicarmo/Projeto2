@@ -3,6 +3,7 @@ package com.senac.projeto2.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -17,8 +18,8 @@ public class Categoria {
 
     @Column(name="categoria_status", nullable = false, length = 11)
     private int status;
-    @OneToMany(mappedBy = "jogo")
-    private Set<Jogo> jogos;
+    @OneToMany(mappedBy = "categoria")
+    private List<Jogo> jogos;
 
 
     public int getId() {

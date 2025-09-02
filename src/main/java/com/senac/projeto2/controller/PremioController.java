@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/categoria")
-@Tag(name="Categoria", description="API para gerenciamento dos categoria do sistema")
+@RequestMapping("api/premio")
+@Tag(name="Premio", description="API para gerenciamento dos categoria do sistema")
 public class PremioController {
 
     private final PremioService premioService;
@@ -37,7 +37,6 @@ public class PremioController {
         if (premio == null) {
             return ResponseEntity.noContent().build();
         }else{
-
             return ResponseEntity.ok(premio);
         }
 
